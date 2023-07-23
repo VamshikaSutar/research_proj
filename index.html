@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href='style.css' rel='stylesheet' type="text/css">
+		<title>Gender-bias calculator</title>
+		<script type="text/javascript" language="javascript" src="genderbias.js"></script>
+	</head>
+	<body>
+		<div id="main">
+			
+			<h1>Gendered Comments Measurement</h1>
+			
+
+			<button class="button" onclick="example()">Try an example!</button>
+
+			<div class="body">
+				<form action="submithandler.php" method="POST">
+					<label for="dictionary">Dictionary:</label>
+					<select id="dictionary">
+						<option value="dictionaries/standard.json">Default list of gendered words</option>
+						<!--<option value="dictionaries/medical.json">Medical-school-specific gendered words</option>-->
+					</select>
+					<textarea onkeyup="textChanged()" placeholder="Text" id="recommendationLetter" style="width:100%; min-height:100px"></textarea>
+				</form>
+	
+				<div id="score"></div>
+				<table>
+					<tr>
+						<th class="bodyTitle">Gendered Words found</td>
+						<th class="bodyTitle">Neutral Words found</td>
+					</tr>
+					<tr>
+						<td class="words" id="foundFemaleWords"></td>
+						<td class="words" id="foundMaleWords"></td>
+					</tr>
+				</table>
+			</div>
+
+			
+
+			
+				
+		</div>
+	</body>
+</html>
